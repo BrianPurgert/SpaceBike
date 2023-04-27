@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:id="@+id/GameLayout" android:orientation="horizontal">
+    <RelativeLayout android:id="@+id/RelativeLayout06" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_alignParentRight="true" android:visibility="gone">
+        <TextView android:textSize="21dp" android:id="@+id/TextView001" android:textColor="#FFFFFF" android:layout_below="@+id/close" android:layout_height="wrap_content" android:layout_width="400dp" android:paddingTop="30dp" android:background="@drawable/infoback" android:text="-Use the panel to the left to tilt your bike, by sliding your thumb to the right you will lean forward, by sliding it to the left you will lean back."></TextView>
+        <TextView android:paddingTop="50dp" android:text="Menu " android:id="@+id/TextView007" android:textColor="#FFFFFF" android:layout_alignParentRight="true" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+        <RelativeLayout android:layout_alignParentBottom="true" android:id="@+id/linearLayout2" android:layout_height="120dp" android:background="#50006699" android:layout_toLeftOf="@+id/linearLayout4" android:layout_width="140dp">
+            <TextView android:id="@+id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="Reverse"></TextView>
+        </RelativeLayout>
+        <RelativeLayout android:layout_alignParentBottom="true" android:id="@+id/linearLayout3" android:layout_height="100dp" android:background="#50FF6600" android:layout_width="230dp">
+            <TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="Tilt Control"></TextView>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/linearLayout4" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_height="120dp" android:background="#50006699" android:layout_width="140dp">
+            <TextView android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="Forward"></TextView>
+        </RelativeLayout>        
+    </RelativeLayout>
+    
+    
+        <RelativeLayout android:id="@+id/RelativeLayout07" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_alignParentRight="true" android:visibility="gone">
+        <TextView android:paddingTop="50dp" android:text="Menu " android:id="@+id/TextView008" android:textColor="#FFFFFF" android:layout_alignParentRight="true" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+        <RelativeLayout android:layout_alignParentBottom="true" android:id="@+id/linearLayout2" android:layout_width="190dp" android:layout_height="120dp" android:background="#50006699">
+            <TextView android:id="@+id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="Reverse"></TextView>
+        </RelativeLayout>
+        <RelativeLayout android:layout_alignParentBottom="true" android:id="@+id/linearLayout3" android:layout_centerHorizontal="true" android:layout_width="90dp" android:layout_height="100dp" android:background="#50FF6600">
+            <TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="Brake"></TextView>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/linearLayout4" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_width="190dp" android:layout_height="120dp" android:background="#50006699">
+            <TextView android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="Forward"></TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    
+    <RelativeLayout android:layout_height="wrap_content" android:id="@+id/RelativeLayout03" android:layout_alignParentRight="true" android:layout_width="390dp" android:background="@drawable/infobackright" android:visibility="gone">
+        <TextView android:layout_marginLeft="10dp" android:maxWidth="420dp" android:layout_height="wrap_content" android:textSize="20dp" android:layout_width="wrap_content" android:id="@+id/TextView02" android:textColor="#FFFFFF" android:layout_marginTop="35dp" android:text="-Use the center(No Gravity) button  to make it over long jumps                                     -Press it again to go back to normal gravity"></TextView>
+    </RelativeLayout>
+    <RelativeLayout android:layout_height="wrap_content" android:id="@+id/platforms" android:layout_width="370dp" android:background="@drawable/infoback" android:visibility="gone">
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView04" android:textColor="#FFFFFF" android:textSize="20dp" android:text="Moving Platforms                                                        - Wait for the platform                             - Ride to the middle of the platform                              " android:maxWidth="350dp"></TextView>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/movingobjects" android:layout_width="450dp" android:visibility="gone" android:background="@drawable/infoback" android:layout_height="wrap_content">
+        <TextView android:layout_height="wrap_content" android:textSize="20dp" android:layout_width="wrap_content" android:id="@+id/TextView04" android:textColor="#FFFFFF" android:text="-Objects can move                                                                       -Some will help you                                                                                 -Some you will have to make your way around" android:maxWidth="420dp" android:layout_marginLeft="10dp" android:layout_marginTop="5dp"></TextView>
+    </RelativeLayout>
+  
+
+  
+
+
+
+<RelativeLayout android:id="@+id/RelativeLayout04" android:layout_height="wrap_content" android:visibility="visible" android:layout_width="wrap_content">
+<ImageButton android:id="@+id/openmenu" android:background="@drawable/pause" android:layout_toLeftOf="@+id/restart2" android:layout_alignParentRight="true" android:layout_height="50dp" android:layout_width="50dp"></ImageButton><ImageButton android:layout_alignParentTop="true" android:background="@drawable/arrowup" android:id="@+id/arrow" android:layout_centerInParent="false" android:layout_toRightOf="@+id/left" android:layout_height="50dp" android:layout_width="50dp" android:clickable="false" android:focusable="false"></ImageButton>
+<ImageButton android:id="@+id/nog" android:layout_toRightOf="@+id/left" android:layout_below="@+id/arrow" android:layout_height="50dp" android:layout_width="50dp" android:focusable="false" android:clickable="false" android:background="@drawable/nogravity"></ImageButton>
+<ImageButton android:id="@+id/right" android:layout_alignBottom="@+id/nog" android:layout_toRightOf="@+id/nog" android:layout_width="50dp" android:layout_height="50dp" android:focusable="false" android:clickable="false" android:background="@drawable/arrowright"></ImageButton>
+<ImageButton android:id="@+id/left" android:layout_alignBottom="@+id/nog" android:layout_width="50dp" android:layout_height="50dp" android:focusable="false" android:clickable="false" android:background="@drawable/arrowleft"></ImageButton>
+
+<ImageView android:layout_alignLeft="@+id/down" android:layout_height="50dp" android:layout_width="50dp" android:layout_alignTop="@+id/down" android:id="@+id/downlight" android:background="@drawable/circle"  android:visibility="gone"></ImageView>
+<ImageView android:layout_alignLeft="@+id/down" android:layout_height="50dp" android:layout_width="50dp" android:layout_alignTop="@+id/arrow" android:id="@+id/uplight" android:background="@drawable/circle"  android:visibility="gone"></ImageView>
+<ImageView android:layout_alignLeft="@+id/left" android:layout_height="50dp" android:layout_width="50dp" android:layout_alignTop="@+id/left" android:id="@+id/leftlight" android:background="@drawable/circle"  android:visibility="gone"></ImageView>
+<ImageView android:layout_alignLeft="@+id/right" android:layout_height="50dp" android:layout_width="50dp" android:layout_alignTop="@+id/right" android:id="@+id/rightlight" android:background="@drawable/circle"  android:visibility="gone"></ImageView>
+<ImageView android:layout_alignLeft="@+id/nog" android:layout_height="50dp" android:layout_width="50dp" android:layout_alignTop="@+id/nog" android:id="@+id/middlelight" android:background="@drawable/circle"  android:visibility="gone"></ImageView>
+<ImageView android:layout_alignParentTop="true" android:id="@+id/battery" android:background="@drawable/battery" android:layout_centerInParent="true" android:layout_width="75dp" android:layout_height="16dp"></ImageView>
+<TextView android:id="@+id/TextView06" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="#00FF00" android:textSize="20dp" android:text="30" android:layout_below="@+id/battery" android:layout_centerHorizontal="true"></TextView><ImageView android:background="@drawable/batterygreen" android:id="@+id/batteryfill" android:layout_alignRight="@+id/battery" android:layout_alignTop="@+id/battery" android:layout_marginRight="3dp" android:layout_width="wrap_content" android:layout_height="13dp"></ImageView>
+
+</RelativeLayout>
+<RelativeLayout android:id="@+id/RelativeLayout09" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_above="@+id/RelativeLayout04" android:layout_toLeftOf="@+id/RelativeLayout04">
+    <TextView android:paddingTop="30dp" android:textSize="21dp" android:text="-Use the right green button, and area above, to go forward and the left to reverse  " android:id="@+id/TextView10" android:textColor="#FFFFFF" android:layout_below="@+id/close" android:layout_height="wrap_content" android:layout_width="400dp"></TextView>
+    <TextView android:paddingTop="50dp" android:text="Menu " android:id="@+id/TextView01" android:textColor="#FFFFFF" android:layout_alignParentRight="true" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+    <RelativeLayout android:background="#50006699" android:id="@+id/RelativeLayout07" android:layout_alignParentBottom="true" android:layout_height="120dp" android:layout_width="190dp">
+        <TextView android:text="Reverse" android:id="@+id/TextView09" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true"></TextView>
+    </RelativeLayout>
+    <RelativeLayout android:background="#50FF6600" android:id="@+id/RelativeLayout08" android:layout_alignParentBottom="true" android:layout_height="100dp" android:layout_width="90dp" android:layout_centerHorizontal="true">
+        <TextView android:text="Brake" android:id="@+id/TextView08" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true"></TextView>
+    </RelativeLayout>
+    <RelativeLayout android:layout_alignParentRight="true" android:background="#50006699" android:id="@+id/RelativeLayout05" android:layout_alignParentBottom="true" android:layout_height="120dp" android:layout_width="190dp">
+        <TextView android:text="Forward" android:id="@+id/TextView07" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true"></TextView>
+    </RelativeLayout>
+</RelativeLayout>
+<RelativeLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/slidebuttons" android:visibility="gone">
+    <ImageView android:layout_marginBottom="15dp" android:layout_marginLeft="10dp" android:clickable="false" android:layout_width="235dp" android:layout_height="wrap_content" android:id="@+id/imageView1" android:background="@drawable/bar" android:layout_alignParentBottom="true"></ImageView>
+    <ImageButton android:layout_height="40dp" android:layout_alignParentRight="true" android:clickable="false" android:background="@drawable/neongreenactive" android:layout_alignParentBottom="true" android:visibility="invisible" android:focusable="false" android:id="@+id/forwardactiveS" android:layout_width="140dp"></ImageButton>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_centerHorizontal="true" android:layout_height="1dp" android:layout_width="20dp"></LinearLayout>
+    <ImageButton android:visibility="invisible" android:focusable="false" android:layout_height="40dp" android:background="@drawable/neongreenactive" android:id="@+id/reverseactiveS" android:clickable="false" android:layout_toLeftOf="@+id/forwardactiveS" android:layout_alignBottom="@+id/forwardactiveS" android:layout_width="140dp"></ImageButton>
+    <ImageButton android:focusable="false" android:layout_height="20dp" android:background="@drawable/neongreen" android:clickable="false" android:layout_toLeftOf="@+id/forwardactiveS" android:layout_alignBottom="@+id/forwardactiveS" android:layout_width="140dp" android:id="@+id/reverseS"></ImageButton>
+    <ImageButton android:layout_alignParentRight="true" android:clickable="false" android:background="@drawable/neongreen" android:layout_alignParentBottom="true" android:focusable="false" android:layout_height="20dp" android:layout_width="140dp" android:id="@+id/fowardS"></ImageButton>
+</RelativeLayout>
+<RelativeLayout android:layout_width="wrap_content" android:id="@+id/normalbuttons" android:layout_alignParentBottom="true" android:layout_height="100dp" android:visibility="gone">
+
+<ImageButton android:layout_alignParentBottom="true" android:id="@+id/forwardactive" android:layout_height="40dp" android:layout_alignParentRight="true" android:clickable="false" android:focusable="false" android:background="@drawable/neongreenactive" android:visibility="invisible" android:layout_width="190dp"></ImageButton>
+<ImageButton android:layout_alignParentBottom="true" android:id="@+id/stopactive" android:layout_height="40dp"  android:background="@drawable/neonorangeactive" android:layout_centerHorizontal="true" android:focusable="false" android:clickable="false" android:visibility="invisible" android:layout_width="90dp"></ImageButton>
+<ImageButton android:layout_alignParentBottom="true" android:layout_height="40dp" android:layout_alignParentLeft="true" android:id="@+id/reverseactive" android:clickable="false" android:focusable="false" android:background="@drawable/neongreenactive" android:visibility="invisible" android:layout_width="190dp"></ImageButton>
+
+
+<ImageButton android:layout_alignParentBottom="true" android:id="@+id/foward" android:layout_alignParentRight="true" android:background="@drawable/neongreen" android:clickable="false" android:focusable="false" android:layout_width="190dp" android:layout_height="13dp"></ImageButton>
+<ImageButton android:layout_alignParentBottom="true" android:id="@+id/stop" android:layout_centerHorizontal="true" android:background="@drawable/neonorange" android:clickable="false" android:focusable="false" android:layout_width="90dp" android:layout_height="13dp"></ImageButton>
+<ImageButton android:layout_alignParentBottom="true" android:id="@+id/reverse" android:background="@drawable/neongreen" android:focusable="false" android:clickable="false" android:layout_width="190dp" android:layout_height="13dp"></ImageButton>
+
+</RelativeLayout>
+<RelativeLayout android:id="@+id/RelativeLayout02" android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:visibility="gone" android:background="#95000000">
+<TextView android:id="@+id/TextView03" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="40dp" android:layout_alignParentTop="true" android:layout_marginTop="20dp" android:text="How do you want to lean"></TextView>
+<TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="(Recommended)" android:paddingTop="35dp" android:layout_below="@+id/TextView03"></TextView>
+
+<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Button01" android:layout_centerHorizontal="true" android:background="@drawable/buttonstyle" android:textSize="45dp" android:textColor="#FFFFFF" android:text="Accelerometer" android:layout_below="@+id/textView1"></Button>
+<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/pickbuttons" android:layout_centerHorizontal="true" android:background="@drawable/buttonstyle" android:textSize="45dp" android:textColor="#FFFFFF" android:layout_below="@+id/Button01" android:text="Slider Bar" android:layout_marginTop="20dp"></Button>
+<TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/pickbuttons" android:layout_centerHorizontal="true" android:text="(For hard to tilt androids)"></TextView>
+</RelativeLayout>
+
+
+
+
+<RelativeLayout android:layout_alignParentTop="true" android:id="@+id/TiltLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:visibility="gone" android:background="#95000000">
+<ImageView android:background="@drawable/phoneleanright" android:layout_height="83dp" android:layout_width="112dp" android:layout_marginTop="25dp" android:id="@+id/phonetop" android:layout_marginLeft="40dp"></ImageView>
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="18dp" android:layout_alignBottom="@+id/phonetop" android:layout_toRightOf="@+id/phonetop" android:id="@+id/phonetext1" android:textColor="#FFFFFF" android:text="Tilt your phone right (or press the right side of your sliderbar) to lean forward "></TextView>
+<Button android:layout_height="wrap_content" android:text="Got It!!!" android:id="@+id/tiltinfo" android:background="@drawable/buttonstyle" android:textSize="45dp" android:textColor="#FFFFFF" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true" android:layout_marginBottom="15dp" android:layout_width="350dp"></Button>
+<ImageView android:background="@drawable/leanforward" android:layout_width="60dp" android:layout_height="49dp" android:layout_above="@+id/phonetext1" android:layout_alignLeft="@+id/phonetext1" android:id="@+id/bike1"></ImageView>
+<ImageView android:background="@drawable/phoneleanleft" android:layout_height="83dp" android:layout_width="112dp" android:id="@+id/phonebottom" android:layout_marginLeft="40dp" android:layout_below="@+id/phonetop" android:layout_marginTop="35dp"></ImageView>
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="18dp" android:layout_alignBottom="@+id/phonebottom" android:layout_toRightOf="@+id/phonebottom" android:id="@+id/phonetext2" android:textColor="#FFFFFF" android:text="Tilt your phone left (or press the left side of your sliderbar) to lean backward"></TextView>
+<ImageView android:background="@drawable/leanback" android:layout_width="60dp" android:layout_height="49dp" android:layout_above="@+id/phonetext2" android:layout_alignLeft="@+id/phonetext2" android:id="@+id/bike2"></ImageView>
+</RelativeLayout>
+
+
+<RelativeLayout android:layout_alignParentBottom="true" android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/gravitypanel" android:visibility="gone" android:background="#95000000">
+<TextView android:layout_height="wrap_content" android:id="@+id/TextView04" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:maxWidth="250dp" android:text="The Gravity Panel" android:textSize="30dp" android:layout_marginTop="5dp" android:textColor="#FFFFFF"></TextView>
+<TextView android:layout_height="wrap_content" android:id="@+id/TextView05" android:layout_width="wrap_content" android:layout_below="@+id/TextView04" android:layout_alignLeft="@+id/TextView04" android:textSize="22dp" android:layout_marginTop="5dp" android:text="-The panel to the left will let you control the direction of gravity                                                          -simply press the desired direction when needed                                                                             -for the first one I will help you out and light up the one's you need to press" android:textColor="#FFFFFF"></TextView><Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:layout_alignParentBottom="true" android:id="@+id/Button04" android:text="Gravity? No Problem" android:background="@drawable/buttonstyle" android:textSize="45dp" android:textColor="#FFFFFF"></Button>
+</RelativeLayout>
+
+<RelativeLayout android:id="@+id/RelativeLayout01" android:layout_height="fill_parent" android:layout_width="fill_parent" android:padding="20dp" android:visibility="gone">
+<LinearLayout android:id="@+id/LinearLayout02" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_width="350dp" android:background="@drawable/roundborder"></LinearLayout>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/restart" android:layout_centerHorizontal="true" android:textSize="40dp" android:text="Restart" android:shadowDx="15" android:shadowDy="15" android:textColor="#FFFFFF" android:layout_marginTop="90dp" android:background="@drawable/buttonstyle"></Button>
+<Button android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:id="@+id/nextlevel"  android:text="Next Level" android:textSize="40dp" android:textColor="#FFFFFF" android:layout_marginTop="160dp" android:background="@drawable/buttonstyle"></Button>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/mainmenu"  android:layout_centerHorizontal="true" android:text="Level Select" android:textSize="40dp" android:textColor="#FFFFFF" android:layout_marginTop="25dp" android:background="@drawable/buttonstyle"></Button>
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@+id/TextView08" android:id="@+id/autorestart" android:layout_below="@+id/restart" android:textSize="25dp" android:textColor="#CC0000" android:layout_marginTop="10dp" android:layout_centerHorizontal="true" android:visibility="gone"></TextView>
+<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/back" android:layout_centerHorizontal="true" android:layout_alignBottom="@+id/LinearLayout02" android:text="Back" android:textColor="#FFFFFF" android:layout_marginBottom="13dp" android:textSize="35dp" android:background="@drawable/buttonstylered"></Button>
+<ImageView android:id="@+id/imageView2" android:layout_alignParentLeft="true" android:background="@drawable/star" android:layout_height="60dp" android:layout_width="60dp" android:visibility="gone"></ImageView>
+<ImageView android:id="@+id/imageView3" android:layout_below="@+id/imageView2" android:layout_alignLeft="@+id/imageView2" android:layout_alignRight="@+id/imageView2" android:paddingTop="20dp" android:background="@drawable/star" android:layout_height="60dp" android:layout_width="60dp" android:visibility="gone"></ImageView>
+<ImageView android:id="@+id/imageView4" android:layout_below="@+id/imageView3" android:layout_alignLeft="@+id/imageView3" android:layout_alignRight="@+id/imageView3" android:paddingTop="20dp" android:background="@drawable/star" android:layout_height="60dp" android:layout_width="60dp" android:visibility="gone"></ImageView>
+<ImageView android:id="@+id/imageView5" android:layout_alignParentRight="true" android:background="@drawable/star" android:layout_height="60dp" android:layout_width="60dp" android:visibility="gone"></ImageView>
+<ImageView android:id="@+id/imageView6" android:layout_below="@+id/imageView5" android:layout_alignLeft="@+id/imageView5" android:layout_alignRight="@+id/imageView5" android:paddingTop="20dp" android:background="@drawable/star" android:layout_height="60dp" android:layout_width="60dp" android:visibility="gone"></ImageView>
+<ImageView android:id="@+id/imageView7" android:layout_below="@+id/imageView6" android:layout_alignLeft="@+id/imageView6" android:layout_alignRight="@+id/imageView6" android:paddingTop="20dp" android:background="@drawable/star" android:layout_height="60dp" android:layout_width="60dp" android:visibility="gone"></ImageView>
+</RelativeLayout>
+
+
+
+</RelativeLayout>

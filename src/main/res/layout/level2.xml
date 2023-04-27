@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:gravity="left|center"
+ android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingBottom="10dp" android:paddingTop="10dp">
+ 
+ <TextView android:text="@+id/TextView02" android:id="@+id/TextView02"
+ android:layout_width="wrap_content" android:layout_height="wrap_content"
+ android:textColor="#0099CC" android:textSize="28dp" android:layout_centerVertical="true" android:layout_marginLeft="10dp"></TextView>
+<TextView android:text="hi" android:layout_width="wrap_content" android:id="@+id/TextView01" android:layout_height="wrap_content" android:textColor="#FFFF00" android:layout_alignParentRight="true" android:gravity="center_vertical" android:layout_centerVertical="true" android:paddingRight="20dp"></TextView>
+<TextView android:layout_height="wrap_content" android:id="@+id/TextView03" android:text="@+id/TextView03" android:layout_width="wrap_content" android:layout_centerVertical="true" android:marqueeRepeatLimit="marquee_forever" android:layout_centerHorizontal="true"></TextView>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.doodle.physics2d.full.spacebike" android:versionName="2.8 full" android:versionCode="29">
+    <application android:icon="@drawable/icon" android:allowClearUserData="true" android:theme="@style/EminiTheme" android:allowTaskReparenting="false" android:label="@string/app_name">
+    			 
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        			android:name="com.doodle.physics2d.full.spacebike.Level"
+               		   android:label="@string/app_name"
+               			   android:screenOrientation="landscape">
+                  
+            <intent-filter>            
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        
+       <activity android:name="com.doodle.physics2d.full.spacebike.DoodleBikeMain"
+       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:screenOrientation="landscape">
+		
+		</activity>
+		
+		       
+		  
+		     
+		
+		   
+		
+	
+		
+		 
+		
+    </application>    
+    
+
+
+<uses-sdk android:targetSdkVersion="19" android:maxSdkVersion="20" android:minSdkVersion="7"></uses-sdk>
+<supports-screens android:normalScreens="true" android:resizeable="true" android:anyDensity="true" android:largeScreens="true" android:smallScreens="true" android:xlargeScreens="false"></supports-screens>
+
+<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+
+
+
+
+</manifest> 

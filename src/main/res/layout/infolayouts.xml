@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:background="#75000000">
+
+
+
+
+<ImageView android:background="@drawable/phoneleanright" android:layout_height="83dp" android:layout_width="112dp" android:layout_marginTop="25dp" android:id="@+id/phonetop" android:layout_marginLeft="40dp"></ImageView>
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="18dp" android:text="Tilt your phone right to lean forward" android:layout_alignBottom="@+id/phonetop" android:layout_toRightOf="@+id/phonetop" android:id="@+id/phonetext1"></TextView><Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/phonetext1" android:layout_alignLeft="@+id/phonetext1" android:layout_alignRight="@+id/phonetext1" android:text="Got It!!!" android:textSize="25dp" android:id="@+id/tiltinfo"></Button><ImageView android:background="@drawable/leanforward" android:layout_width="60dp" android:layout_height="49dp" android:layout_above="@+id/phonetext1" android:layout_alignLeft="@+id/phonetext1" android:id="@+id/bike1"></ImageView><ImageView android:layout_alignParentBottom="true" android:background="@drawable/phoneleanleft" android:layout_height="83dp" android:layout_width="112dp" android:layout_marginBottom="25dp" android:id="@+id/phonebottom" android:layout_marginLeft="40dp"></ImageView>
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="18dp" android:text="Tilt your phone left to lean backward" android:layout_alignBottom="@+id/phonebottom" android:layout_toRightOf="@+id/phonebottom" android:id="@+id/phonetext2"></TextView>
+
+
+
+<ImageView android:background="@drawable/leanback" android:layout_width="60dp" android:layout_height="49dp" android:layout_above="@+id/phonetext2" android:layout_alignLeft="@+id/phonetext2" android:id="@+id/bike2"></ImageView>
+
+
+</RelativeLayout>

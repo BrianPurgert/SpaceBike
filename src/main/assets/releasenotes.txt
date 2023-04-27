@@ -1,0 +1,172 @@
+Release Notes
+
+Emini Physics Engine
+www.emini.at
+
+=============
+Version 1.3.4
+
+- New Engine Feature:
+    - Precise contact normal calculation - can be enabled via compile switch
+    - Dynamic iteration count. The constraint iteration can be set to dynamic, aborting when all constraints are satisfied. 
+    
+- Engine Modification:
+    - Interface changes to make constraint iteration counts and timestep part of the world instead of static. 
+    - Timestep is not longer static, so that multiple worlds cnaa use different simulation parameters. 
+    - Interface change: applyAcceleration takes the tiemstep as argument
+    - Add mode to motors that can remove orthogonal movement
+    
+- Engine Bug Fix: 
+    - Clean up contacts completely, when they are reused for different body collision. 
+    - Friction could in some situations cause bodies to jump due to uninitialized contact loop values. 
+    
+=============
+Version 1.3.3
+
+- Designer Bug Fix: 
+    - landscape is not displayed correctly in tree view
+    - worlds with script could sometimes fail loading
+
+- new feature:
+    - new event type:  relative collision
+    - added utility method to convert angle2FX to degrees
+    
+- Engine Bug fix: 
+    - bodies that are non-affected by gravity do not interact properly. 
+    - contact assignment from one step to another could be wrong causing wrong bouncing behaviour.
+    - script removal did not remove the entire script
+    - body collision events sometimes did not return the correct contact body
+    
+=============
+Version 1.3.2
+
+- Engine Bug Fixes:
+    - AABB calculation incorrect, fixes potential tunneling error with landscapes
+    - static body loading
+    - collision: particle - circle: wrong position correction (was a little overcompensating)
+    
+    - performance boosts
+    
+- Designer features:
+    - display AABB
+
+=============
+Version 1.3.1
+
+- Engine Bug fixes:
+    - Joint copy creates correct reference
+    - Shape filtering for events working correctly 
+    - collision of bodies with center of gravity not in the origin: correct collision face determination
+    
+- Engine features:
+    - event triggering: Contact events return the triggering contact, instead of the body. 
+    - bodies have additional flags: 
+        - not affected by gravity: gravity force does not apply to this body
+        - not interacting: the body is not considered for collision with other bodies
+
+	- improved interface:
+        - contact allows impulse inspection
+        - additional setters/getters
+        
+    - additional flags for the bodies:
+        - not affected by gravity, can be used for floating bodies, that still behave physically
+        - not interacting with other bodies, can be intersting in combination with other constraints
+        
+    - added event type: collision sensor, collisions with a body sensor can be detected. 
+        The body is not part of the physical world and represents a sensor. 
+
+=============
+Version 1.3.0
+- Engine features:
+    - True multishape support. This allows to create convex shapes. 
+    - Bug fix: corrected inertia calculation, improving stacking in particular for long bodies
+    - Improve collision detection and response: collision lookahead allows non-penetration (except for complicated situations)
+    
+- Designer:
+    - multishape support
+
+    
+=============
+Version 1.2.1
+- Engine features:
+    - performance
+    - userdata for bodies and shape
+    
+- Designer:
+    - level management
+
+=============
+Version 1.2.0
+- New features:
+    - particles : complete treatment of particles, including collision with other bodies in the world
+    - motor: relative movemet is possible
+
+- Designer: 
+    - world view
+    
+=============
+Version 1.1.1
+- Bug fixes:
+    #5 	Bouncing with elasticity of 1.0 wrong 	
+    A falling ball with an elasticity of one can bounce higher up than it was initially dropping from.
+    
+    #4 	Body Joints can cause instability 	
+    If the joint is placed far off from both object centers, instabilities can occur
+    
+    #3 	Gravity settings do not work 	
+    Changing gravity in the world designer does not have an effect in the simulation. 
+
+- Designer
+  - Features:  
+    - nicer handling: interaction elements retain size while zooming
+    - Area events can be modified with the mouse
+    - Undo history
+    - Saving/loading of shapes improved
+  
+=============
+Version 1.1.0
+  
+- Engine:
+  - Features:  
+    - new shape identification handling: ShapeSet
+      - note: use shapes only in one world!
+    - new event identification handling: EventSet
+    - events can be set to trigger only once, when they are active the first time
+    - landscape can use the colission flags as well
+    - landscape faces
+    - new contact overlap correction: concept loosely based on split impulses
+    - events can be set to trigger once
+    - API changes: mass is associated with shape, not body
+  - Bugs:
+    - incorrect collision detection for some border cases: objects with narrow edges
+    - fix joint are sometimes unstable
+    - centroid computation -> overflow
+    
+- Designer: 
+  - Features: 
+    - multi selection
+    - load background image, to design shapes and world around an image    
+  - Bugs: 
+    - saving springs was incorrect
+    - moving pin joints
+    - remove shapes completely
+    
+- A true floating point version of the engine is supplied. 
+  This library gives better results for mobiles with hardware floating point support. 
+ 
+  
+=============
+Version 1.0.1
+- improved API: clear separation of fixpoint interface and int interface
+- Bug Fix: Fixed Joints divert from each other in special angle constellations
+- improved (and explicit) Landscape treatment
+- improved object reusal in the collision detection (much less GC action)
+
+=============
+Version 1.0.0
+- basic functionality:
+  - collision detection, resolution
+  - constraints (pin joints, springs, motors)
+  - gravity, friction, restitution
+  - fast body treatment
+  - improved stacking

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="raw">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/res/raw/physicsenginedesigner_v134.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/res/raw/physicsengine_v134.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
