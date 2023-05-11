@@ -14,6 +14,8 @@
 
 package com.doodle.physics2d.full.spacebike;
 
+import static at.emini.a.d.R;
+
 import android.graphics.Point;
 import android.view.Display;
 import android.widget.LinearLayout;
