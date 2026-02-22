@@ -35,7 +35,7 @@
     
 
 
-<uses-sdk android:targetSdkVersion="20" android:maxSdkVersion="33" android:minSdkVersion="7"></uses-sdk>
+<uses-sdk android:targetSdkVersion="20" android:minSdkVersion="7"></uses-sdk>
 <supports-screens android:normalScreens="true" android:resizeable="true" android:anyDensity="true" android:largeScreens="true" android:smallScreens="true" android:xlargeScreens="false"></supports-screens>
 
 <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
