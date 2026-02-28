@@ -66,13 +66,57 @@ src/main/
 - **Sensor:** `SensorManager.SENSOR_ACCELEROMETER` for tilt controls
 - **Audio:** `SoundPool` for sound effects; `MediaPlayer` for music (imported but managed via `SoundManager`)
 
-## Building
+## Building an APK
 
-This project uses a legacy Android source layout (`src/main/`) without Gradle or Maven build files. To build it:
+### Prerequisites
 
-1. Import the project into **Android Studio** (or IntelliJ IDEA).
-2. Add the physics engine JARs from `src/main/assets/` (`PhysicsEngine_v134.jar`) to the module's compile classpath.
-3. Build and run on a device or emulator running Android 2.1 (API 7) or later.
+- **Java Development Kit (JDK) 11 or 17** — required by the Android Gradle plugin.
+- **Android SDK** — install via [Android Studio](https://developer.android.com/studio) or the standalone [command-line tools](https://developer.android.com/studio#command-line-tools-only). Make sure `ANDROID_HOME` (or `ANDROID_SDK_ROOT`) is set.
+- **Android SDK Platform 34** — install through Android Studio's SDK Manager or with:
+  ```bash
+  sdkmanager "platforms;android-34" "build-tools;34.0.0"
+  ```
+
+### Build with the Gradle wrapper
+
+If you have the [Gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) installed (or generate it with `gradle wrapper`), you can build from the command line:
+
+```bash
+# Debug APK
+./gradlew assembleDebug
+
+# The APK will be at:
+# build/outputs/apk/debug/SpaceBike-debug.apk
+```
+
+To create a **release APK** you must sign it. First create a keystore, then build:
+
+```bash
+# Generate a keystore (one-time step)
+keytool -genkey -v -keystore my-release-key.jks \
+  -keyalg RSA -keysize 2048 -validity 10000 -alias spacebike
+
+# Build the release APK
+./gradlew assembleRelease
+
+# Sign the APK
+apksigner sign --ks my-release-key.jks \
+  build/outputs/apk/release/SpaceBike-release-unsigned.apk
+```
+
+### Build with Android Studio
+
+1. Open the project root folder in **Android Studio**.
+2. Wait for Gradle sync to complete.
+3. Select **Build → Build Bundle(s) / APK(s) → Build APK(s)**.
+4. The generated APK will be in `build/outputs/apk/`.
+
+### Install and run
+
+```bash
+# Install the debug APK on a connected device or emulator
+adb install build/outputs/apk/debug/SpaceBike-debug.apk
+```
 
 ## Credits
 

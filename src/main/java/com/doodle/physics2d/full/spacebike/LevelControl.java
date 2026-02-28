@@ -1,7 +1,6 @@
 package com.doodle.physics2d.full.spacebike;
 
-import com.doodle.physics2d.full.spacebike.R;// This was previously removed, Added it back in for testing
-import com.doodle.physics2d.graphics.SimulationView;// This was previously removed, Added it back in for testing
+import com.doodle.physics2d.full.spacebike.R;
 
 public class LevelControl {
 
@@ -128,8 +127,8 @@ public class LevelControl {
 	}
 
 private static void defaultSettings(){
-	DoodleBikeMain.Xaxis = true;                     
-
+	DoodleBikeMain.Xaxis = true;
+	DoodleBikeMain.Drawlandscape = true;
 }
 	// -------- Levels --------//
 	

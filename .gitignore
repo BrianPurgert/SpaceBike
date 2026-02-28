@@ -1,0 +1,15 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# Local configuration
+local.properties
+
+# IDE
+*.iml
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
