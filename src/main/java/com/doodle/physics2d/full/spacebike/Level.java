@@ -84,8 +84,8 @@ public class Level extends Activity {
 
 		setContentView(R.layout.level3);
 
-		SharedPreferences settings = getSharedPreferences("lvlsCompleted", 0);
-		DoodleBikeMain.lvlsComplete = settings.getInt("lvlsCompleted", 0);
+		SharedPreferences settings = getSharedPreferences("lvlsComplete", 0);
+		DoodleBikeMain.lvlsComplete = settings.getInt("lvlsComplete", 0);
 
 		SharedPreferences detail = getSharedPreferences("detaillevel", 0);
 		lvldetail = detail.getInt("detaillevel", 2);
@@ -313,7 +313,6 @@ public class Level extends Activity {
 			curr[0] = "Complete";
 			break; // level 4
 		case 4:
-			curr[4] = "Complete";
 			curr[3] = "Complete";
 			curr[2] = "Complete";
 			curr[1] = "Complete";
@@ -373,12 +372,11 @@ public class Level extends Activity {
 			curr[0] = "Complete";
 			break; // level 4
 		case 4:
-			curr[4] = "Complete";
 			curr[3] = "Complete";
 			curr[2] = "Complete";
 			curr[1] = "Complete";
 			curr[0] = "Complete";
-			break; // level 5
+			break; // all levels complete
 
 		}
 	}

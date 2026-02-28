@@ -385,7 +385,7 @@ public class GraphicsWorld extends World implements SensorListener {
     	  int constraintCount = getConstraintCount();
           Constraint[] constraints = getConstraints();
           
-          for(int i = constraintCount; i >= 0; i--) {
+          for(int i = constraintCount - 1; i >= 0; i--) {
               removeConstraint(constraints[i]);
           }                 
       putmotor();
