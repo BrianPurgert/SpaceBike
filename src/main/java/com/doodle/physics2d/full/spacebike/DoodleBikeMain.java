@@ -14,15 +14,8 @@
 
 package com.doodle.physics2d.full.spacebike;
 
-import static at.emini.a.d.R;
-
 import android.graphics.Point;
 import android.view.Display;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow; 
-import android.view.ViewGroup.LayoutParams; 
-import android.media.MediaPlayer;
-import android.os.AsyncTask;
 
 import android.app.Activity;
 import android.content.Context;
@@ -110,7 +103,7 @@ public class DoodleBikeMain extends Activity {
 	public static int maxT;
 	// -------level unlocker-------//
 	public static int lvlId;
-	public static int lvlsComplete=5;
+	public static int lvlsComplete=0;
 	// -----Turns of event checking---//
 	private boolean SeeEvents = true;
 	private boolean forwardwasreleased;
@@ -164,7 +157,7 @@ public class DoodleBikeMain extends Activity {
 		screenHeight = size.y;
 
 		// =================================================//
-		//               Set up shitty FX sounds            //
+		//               Set up FX sounds                   //
 		// =================================================//
 		mSoundManager = new SoundManager();
 

@@ -5,18 +5,12 @@ import com.doodle.physics2d.full.spacebike.DoodleBikeMain;
 import com.doodle.physics2d.full.spacebike.Level;
 import com.doodle.physics2d.full.spacebike.R;
 
-import android.graphics.drawable.VectorDrawable;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.GradientDrawable.Orientation;
 import android.view.MotionEvent;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.TextView;
@@ -236,7 +230,7 @@ public class SimulationView extends SurfaceView implements SurfaceHolder.Callbac
                         }
                     }
 
-        if (SD != 0 || SD != 90 || SD != 180 || SD != 270) {
+        if (SD != 0 && SD != 90 && SD != 180 && SD != 270) {
             if (SD < 45 || SD > 315) {
                 GraphicsWorld.greenline.setColor(Color.rgb(0, 108, 0));
                 GraphicsWorld.greenline2.setColor(Color.rgb(0, 75, 0));

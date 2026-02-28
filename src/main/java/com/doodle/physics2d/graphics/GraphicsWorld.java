@@ -9,7 +9,6 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
-import android.graphics.drawable.VectorDrawable;
 import android.hardware.SensorListener;
 import android.hardware.SensorManager;
 
@@ -180,9 +179,8 @@ public class GraphicsWorld extends World implements SensorListener {
         final boolean skipOptimize = false;
         canvas.translate(-xTranslate, -yTranslate);
 
-       /* This is used for optimization purposes it checks to to see if the line segments are are inside
+       /* This is used for optimization purposes it checks to see if the line segments are inside
        of the camera and if they are, they will be drawn to the canvas and only then */
-        /* it does not fucking work ATM, not displaying half of the shit */
 //------------------ Render Landscape ------------------//
         final  int leftscreen = xTranslate - screenHeight; //-100
         final int rightscreen = xTranslate + screenHeight; //+1000
@@ -198,7 +196,7 @@ public class GraphicsWorld extends World implements SensorListener {
                 final int YStart =   startPoint.yAsInt();            
                 final int XEnd =   endPoint.xAsInt();  
                 final int YEnd =   endPoint.yAsInt();
-                if((XStart > leftscreen || XEnd > leftscreen && XStart < rightscreen || XEnd < rightscreen && YStart > upscreen || YEnd > upscreen && YStart < downscreen || YEnd < downscreen) || skipOptimize ){
+                if(((XStart > leftscreen || XEnd > leftscreen) && (XStart < rightscreen || XEnd < rightscreen) && (YStart > upscreen || YEnd > upscreen) && (YStart < downscreen || YEnd < downscreen)) || skipOptimize ){
 
                                 canvas.drawLine(startPoint.xFX >> FXUtil.DECIMAL, startPoint.yFX >> FXUtil.DECIMAL, endPoint.xFX >> FXUtil.DECIMAL, endPoint.yFX >> FXUtil.DECIMAL, lowline);
                                 canvas.drawLine(startPoint.xFX >> FXUtil.DECIMAL, startPoint.yFX >> FXUtil.DECIMAL, endPoint.xFX >> FXUtil.DECIMAL, endPoint.yFX >> FXUtil.DECIMAL, renderLandscape2);
@@ -324,9 +322,9 @@ public class GraphicsWorld extends World implements SensorListener {
     public final void onSensorChanged(int sensor, float[] values){
     	 xvalue = values[0];
           switch(tilt){
-              case 0: 	max = 10 - sensitivity;     sensitivity = 5;   break;
-              case 1:  	max = 12 - sensitivity; 	sensitivity = 7;   break;
-              case 2:   max = 15 - sensitivity;     sensitivity = 11;   break;
+              case 0: 	sensitivity = 5;   max = 10 - sensitivity;   break;
+              case 1:  	sensitivity = 7;   max = 12 - sensitivity;   break;
+              case 2:   sensitivity = 11;  max = 15 - sensitivity;   break;
         }
  
     switch(sensor) {
