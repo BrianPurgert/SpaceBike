@@ -31,9 +31,9 @@ public class LevelControl {
 	   case 20: Level20(); break;  */
 	   default: Level0(); break;
 	   }
-    };
+    }
 	
-	public static final void Level0(){						
+	public static void Level0(){
 		DoodleBikeMain.Xaxis = true;                       // If the camera goes up and down
 		DoodleBikeMain.Drawlandscape = true;                // Draw Landscape 
 		DoodleBikeMain.pickedWorld = R.raw.tutorial;			 // Originally .infotest before simpletest
@@ -42,7 +42,7 @@ public class LevelControl {
 	}
 	
 	
-	public static final void Level1(){						
+	public static void Level1(){
 		DoodleBikeMain.Xaxis = true;                       // If the camera goes up and down				
 		DoodleBikeMain.Drawlandscape = true;                // Draw Landscape 
 		DoodleBikeMain.pickedWorld = R.raw.level0;			 // World to load						     	     
@@ -53,8 +53,9 @@ public class LevelControl {
 	public static void Level2(){						
 		DoodleBikeMain.Xaxis = true;                       // If the camera goes up and down
 		DoodleBikeMain.Drawlandscape = true;                // Draw Landscape 
-		DoodleBikeMain.pickedWorld = R.raw.level;			 // World to load	
-	    DoodleBikeMain.lvlId = 2;  // for unlocking levels	and determining the level     	
+		// Previous file R.raw.level appears corrupted on modern builds; use the intended Level 2 file instead.
+		DoodleBikeMain.pickedWorld = R.raw.level1;			 // World to load	
+	    DoodleBikeMain.lvlId = 2;  // for unlocking levels	and determining the level    	
 	    DoodleBikeMain.timelimit = 150000;
 	}
 	
